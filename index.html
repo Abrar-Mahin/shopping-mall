@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Mall Property Subsystem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Shopping Mall Property Subsystem</h1>
+    <nav>
+      <ul>
+        <li><a href="#advertising">Advertising</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#customers">Customer Service</a></li>
+        <li><a href="#financials">Financials</a></li>
+        <li><a href="#tenants">Tenants</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Advertising Section -->
+    <section id="advertising">
+      <h2>Advertising Management</h2>
+      <form id="adUploadForm">
+        <input type="text" id="advertiserName" placeholder="Advertiser Name" required>
+        <input type="file" id="adFile" accept="image/*,video/*" required>
+        <textarea id="adDescription" placeholder="Ad Description" required></textarea>
+        <label for="adSchedule">Schedule:</label>
+        <input type="datetime-local" id="adSchedule" required>
+        <button type="submit">Upload Ad</button>
+      </form>
+      <div id="adsGrid" class="grid"></div>
+    </section>
+
+    <!-- Member Management -->
+    <section id="members">
+      <h2>Member Registration & Login</h2>
+      <form id="memberRegisterForm">
+        <input type="text" id="memberName" placeholder="Member Name" required>
+        <input type="email" id="memberEmail" placeholder="Email" required>
+        <input type="password" id="memberPassword" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+      <div id="memberList"></div>
+    </section>
+
+    <!-- Customer Service -->
+    <section id="customers">
+      <h2>Customer Service</h2>
+      <form id="customerFeedbackForm">
+        <textarea id="customerFeedback" placeholder="Enter feedback, complaints, or suggestions..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div id="customerFeedbackList"></div>
+    </section>
+
+    <!-- Financial Management -->
+    <section id="financials">
+      <h2>Financial Management</h2>
+      <div>
+        <p>Revenue: $<span id="revenue">0</span></p>
+        <p>Expenditure: $<span id="expenditure">0</span></p>
+        <p>Profit: $<span id="profit">0</span></p>
+      </div>
+    </section>
+
+    <!-- Tenant Management -->
+    <!-- <section id="tenants">
+      <h2>Tenant Management</h2>
+      <form id="tenantForm">
+        <input type="text" id="tenantName" placeholder="Tenant Name" required>
+        <input type="text" id="leaseTerm" placeholder="Lease Term (months)" required>
+        <input type="number" id="monthlyRent" placeholder="Monthly Rent" required>
+        <button type="submit">Add Tenant</button>
+      </form>
+      <div id="tenantList" class="grid"></div>
+    </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Shopping Mall Property Subsystem</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
